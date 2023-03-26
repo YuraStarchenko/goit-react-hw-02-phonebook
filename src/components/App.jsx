@@ -48,8 +48,7 @@ export class App extends Component {
 	}
 
   render() {
-		const { filter } = this.state;
-		const visibleContacts = this.getVisibleContacts;
+		const { contacts, filter } = this.state;
     return (
       <Container>
         <h1>Phonebook</h1>
@@ -60,10 +59,7 @@ export class App extends Component {
         <h2>Contacts</h2>
         <p>find contact by name</p>
         <Filter filter={filter} onChange={this.handleFiterContact} />
-        <ContactList
-          contacts={visibleContacts}
-          onRemove={this.handleRemoveContact}
-        />
+        <ContactList contacts={contacts} onRemove={this.handleRemoveContact} />
         <GlobalStyle />
       </Container>
     );
