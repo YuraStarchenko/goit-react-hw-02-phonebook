@@ -17,7 +17,7 @@ export const Input = styled.input`
   font: inherit;
   outline: transparent;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
+  border-radius: 20px;
   margin: 10px 0;
 `;
 
@@ -34,7 +34,7 @@ export const Button = styled.button`
   color: #ffffff;
   background-color: #2196f3;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   margin: 20px auto 0;
   transition-property: background-color, fill;
   transition-duration: 250ms;

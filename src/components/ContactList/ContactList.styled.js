@@ -21,7 +21,7 @@ export const Btn = styled.button`
   color: #ffffff;
   background-color: #2196f3;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   margin: 10px 0;
   transition-property: background-color, fill;
   transition-duration: 250ms;
