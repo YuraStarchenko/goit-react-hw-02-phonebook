@@ -4,6 +4,7 @@ export const Label = styled.label`
   width: 100%;
   margin: 0 auto;
 `;
+
 export const Form = styled.form`
   margin: 10px 0;
 `;

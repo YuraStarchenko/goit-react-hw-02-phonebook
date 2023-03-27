@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { ContactForm } from './ContactForm/ContactForm';
 import { GlobalStyle } from '../GlobalStyle';
-import { Container, Text, Title } from './Container.styled';
+import { Container, Text, Title, TitleText, Book } from './Container.styled';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 import { nanoid } from 'nanoid';
@@ -38,7 +38,7 @@ export class App extends Component {
     }));
 
   handleFiterContact = e => {
-    this.setState({ filter: e.currentTarget.value, });
+    this.setState({ filter: e.currentTarget.value });
   };
 
   render() {
@@ -47,18 +47,23 @@ export class App extends Component {
     const filterContacts = this.state.contacts.filter(contact =>
       contact.name.toLowerCase().includes(getVisibleContacts)
     );
-		
+
     return (
       <Container>
-        <h1>Phonebook</h1>
-        <ContactForm onSubmit={this.formSubmitHandler} />
-        <Title>Contacts</Title>
-        <Text>find contact by name</Text>
-        <Filter filter={this.state.filter} onChange={this.handleFiterContact} />
-        <ContactList
-          contacts={filterContacts}
-          onRemove={this.handleRemoveContact}
-        />
+        <Book>
+          <TitleText>Phonebook</TitleText>
+          <ContactForm onSubmit={this.formSubmitHandler} />
+          <Title>Contacts</Title>
+          <Text>find contact by name</Text>
+          <Filter
+            filter={this.state.filter}
+            onChange={this.handleFiterContact}
+          />
+          <ContactList
+            contacts={filterContacts}
+            onRemove={this.handleRemoveContact}
+          />
+        </Book>
         <GlobalStyle />
       </Container>
     );
