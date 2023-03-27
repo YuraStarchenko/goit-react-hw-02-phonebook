@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { ContactForm } from './ContactForm/ContactForm';
 import { GlobalStyle } from '../GlobalStyle';
-import { Container } from './Container.styled';
+import { Container, Text, Title } from './Container.styled';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 import { nanoid } from 'nanoid';
@@ -52,8 +52,8 @@ export class App extends Component {
       <Container>
         <h1>Phonebook</h1>
         <ContactForm onSubmit={this.formSubmitHandler} />
-        <h2>Contacts</h2>
-        <p>find contact by name</p>
+        <Title>Contacts</Title>
+        <Text>find contact by name</Text>
         <Filter filter={this.state.filter} onChange={this.handleFiterContact} />
         <ContactList
           contacts={filterContacts}

@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import { Text } from './ContactListItem.styled';
 
 export const ContactListItem = ({ contact: { name, number } }) => {
   return (
-    <p>
+    <Text>
       {name}: {number}
-    </p>
+    </Text>
   );
 };
 
