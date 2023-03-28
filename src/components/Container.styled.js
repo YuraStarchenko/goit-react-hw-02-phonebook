@@ -14,7 +14,6 @@ export const Book = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0px;
   text-align: center;
   border: solid 3px #fbdddd;
   width: 350px;
